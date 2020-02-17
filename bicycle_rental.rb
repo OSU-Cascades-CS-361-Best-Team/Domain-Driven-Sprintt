@@ -1,2 +1,2 @@
-require relative 'bicycle_rental_workflow'
+require_relative 'bicycle_rental_workflow'
 
