@@ -1,6 +1,6 @@
 
-class BicycleRentalWorkflow(bike)
-    def initialize 
+class BicycleRentalWorkflow
+    def initialize(bike)
         @bike = bike
 
     end
