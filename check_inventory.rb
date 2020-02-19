@@ -1,4 +1,4 @@
-class Check_Inventory
+class CheckInventory
 
   def display (inventory) 
     inventory.bikes 
