@@ -3,11 +3,11 @@ require_relative 'inventory.rb'
 require_relative 'check_inventory.rb'
 
 
-bike1 = Bike.new(10, "pink", 10, True, "Pink Bike")
-bike2 = Bike.new(10, "pink", 10, False, "Pink Bike")
-bike3 = Bike.new(10, "pink", 10, True, "Pink Bike")
-bike4 = Bike.new(10, "pink", 10, False, "Pink Bike")
-bike5 = Bike.new(10, "pink", 10, True, "Pink Bike")
+bike1 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
+bike2 = Bike.new(10, "pink", 10, :FALSE, "Pink Bike")
+bike3 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
+bike4 = Bike.new(10, "pink", 10, :FALSE, "Pink Bike")
+bike5 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
 
 inventory = Inventory.new
 check_inventory = Check_Inventory.new
@@ -18,7 +18,7 @@ inventory.add_bike(bike3)
 inventory.add_bike(bike4)
 inventory.add_bike(bike5)
 
-puts check_inventory.diplay(inventory)
+puts check_inventory.display(inventory)
 
 
 
