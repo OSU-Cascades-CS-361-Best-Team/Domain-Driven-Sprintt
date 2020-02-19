@@ -18,7 +18,7 @@ inventory.add_bike(bike3)
 inventory.add_bike(bike4)
 inventory.add_bike(bike5)
 
-puts check_inventory.display(inventory)
+check_inventory.pretty_print(inventory.bikes)
 
 
 
