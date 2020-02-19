@@ -1,4 +1,6 @@
 class Inventory
+
+  attr_reader :bikes
   
   def initialize 
     @bikes = []
