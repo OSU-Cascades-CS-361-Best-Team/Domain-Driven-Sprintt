@@ -4,7 +4,7 @@ class Bike
   #declared getter and setters 
   attr_accessor :weight, :color, :size, :availability, :label, :description
   
-  def initialize weight, color, size, availability, description
+  def initialize (weight, color, size, availability, description)
     @weight = weight
     @color = color
     @size = size
