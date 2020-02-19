@@ -1,6 +1,9 @@
 class Check_Inventory
 
-  def initialize
+  def display inventory 
+    inventory 
   end
+
+  
 
 end
