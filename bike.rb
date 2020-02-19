@@ -1,5 +1,6 @@
 class Bike
 
+
   #declared getter and setters 
   attr_accessor :weight, :color, :size, :availability
   
