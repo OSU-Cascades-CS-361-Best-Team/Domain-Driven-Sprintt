@@ -15,4 +15,8 @@ class Bike
   def repair
   end
 
+  def print_attributes 
+    print @weight , " " , @color , " " , @size , " " ,@availability , " " , @description, "\n"
+  end
+
 end

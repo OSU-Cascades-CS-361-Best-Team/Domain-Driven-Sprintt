@@ -6,7 +6,7 @@ class Check_Inventory
 
   def pretty_print (bikes)
     bikes.each{ |bike|
-      print bike.weight , " " , bike.color , " " , bike.size , " " ,bike.availability , " " , bike.description, "\n"
+     bike.print_attributes 
   }
   end
 
