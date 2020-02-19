@@ -8,3 +8,17 @@ bike2 = Bike.new(10, "pink", 10, False, "Pink Bike")
 bike3 = Bike.new(10, "pink", 10, True, "Pink Bike")
 bike4 = Bike.new(10, "pink", 10, False, "Pink Bike")
 bike5 = Bike.new(10, "pink", 10, True, "Pink Bike")
+
+inventory = Inventory.new
+check_inventory = Check_Inventory.new
+
+inventory.add_bike(bike1)
+inventory.add_bike(bike2)
+inventory.add_bike(bike3)
+inventory.add_bike(bike4)
+inventory.add_bike(bike5)
+
+puts check_inventory.diplay(inventory)
+
+
+
