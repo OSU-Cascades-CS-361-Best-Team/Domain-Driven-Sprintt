@@ -8,9 +8,10 @@ class Inventory
   end
 
   def add_item (inventoryItem, bike)
-    id = @largestId + 1
+    @largestId += 1
     inventoryItem.bike = bike
-    inventoryItem.id = id
+    inventoryItem.id = @largestId
+    puts inventoryItem.id
     @items.append(inventoryItem)
   end
 
