@@ -1,19 +1,19 @@
 class Inventory
 
-  attr_reader :bikes
+  attr_reader :items
 
-  def initialize(bikes = [], largestId = 0)
-    @bikes = bikes
+  def initialize(items = [], largestId = 0)
+    @items = items
     @largestId = largestId
   end
 
-  def add_bike (inventoryItem)
+  def add_item (inventoryItem)
     id = largest
-    @bikes.append(inventoryItem)
+    @items.append(inventoryItem)
   end
 
   def remove_bike (inventoryItem)
-    @bikes.delete(inventoryItem)
+    @items.delete(inventoryItem)
   end
 
 end
