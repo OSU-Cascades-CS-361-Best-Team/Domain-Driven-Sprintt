@@ -1,30 +1,40 @@
-require_relative 'bike.rb'
-require_relative 'inventory.rb'
-require_relative 'check_inventory.rb'
-require_relative 'inventory_item.rb'
+require_relative 'bike'
+require_relative 'inventory'
+require_relative 'check_inventory'
+require_relative 'bicycle_rental'
+require_relative 'customer'
+require_relative 'bicycle_rental_workflow'
 
+customer1 = Customer.new(1, 'John', 'Doe')
+customer2 = Customer.new(1, 'Jane', 'Doe')
 
-bike1 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
-bike2 = Bike.new(10, "pink", 10, :FALSE, "Pink Bike")
-bike3 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
-bike4 = Bike.new(10, "pink", 10, :FALSE, "Pink Bike")
-bike5 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
+bike1 = Bike.new(1, 10, "pink", 10, true, "Pink Bike", 100)
+bike2 = Bike.new(2, 10, "pink", 10, false, "Pink Bike", 200)
+bike3 = Bike.new(3, 10, "pink", 10, true, "Pink Bike", 150)
+bike4 = Bike.new(4, 10, "pink", 10, false, "Pink Bike", 120)
+bike5 = Bike.new(5, 10, "pink", 10, true, "Pink Bike", 8000)
 
 nilBike = NilBike.new
-
-item1 = InventoryItem.new(nilBike)
-item2 = InventoryItem.new(nilBike)
-item3 = InventoryItem.new(nilBike)
-item4 = InventoryItem.new(nilBike)
-item5 = InventoryItem.new(nilBike)
 
 inventory = Inventory.new
 checkInventory = CheckInventory.new
 
-inventory.add_item(item1, bike1)
-inventory.add_item(item2, bike2)
-inventory.add_item(item3, bike3)
-inventory.add_item(item4, bike4)
-inventory.add_item(item5, bike5)
+inventory.add(bike1)
+inventory.add(bike2)
+inventory.add(bike3)
+inventory.add(bike4)
+inventory.add(bike5)
 
-checkInventory.pretty_print(inventory.items)
+checkInventory.pretty_print(inventory.bikes)
+
+rental1 = BicycleRental.new(customer1, nilBike)
+rental2 = BicycleRental.new(customer2, nilBike)
+
+workflow = BicycleRentalWorkflow.new()
+
+workflow.run(inventory, rental1)
+workflow.run(inventory, rental2)
+
+puts "\n"
+puts rental1.bike.print_attributes
+puts rental2.bike.print_attributes

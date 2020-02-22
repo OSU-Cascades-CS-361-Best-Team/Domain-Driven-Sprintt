@@ -1,10 +1,11 @@
 class CheckInventory
 
-  def pretty_print (item)
-    item.each{ |item|
-      print(item.id, " ")
-      item.print_bike
-  }
+  def pretty_print (bikes)
+
+    bikes.each{ |bike|
+      bike.print_attributes
+    }
+
   end
 
 end

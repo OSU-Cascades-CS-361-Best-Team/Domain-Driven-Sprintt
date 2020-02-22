@@ -1,21 +1,28 @@
 class Inventory
 
-  attr_reader :items
+  attr_reader :bikes
 
-  def initialize(items = [], largestId = 0)
-    @items = items
-    @largestId = largestId
+  def initialize(bikes = [])
+    @bikes = bikes
   end
 
-  def add_item (inventoryItem, bike)
-    @largestId += 1
-    inventoryItem.bike = bike
-    inventoryItem.id = @largestId
-    @items.append(inventoryItem)
-  end
+	def add(bike)
+		@bikes << bike
+	end
 
-  def remove_bike (inventoryItem)
-    @items.delete(inventoryItem)
-  end
+	def remove(bike)
+		@bikes << bike
+	end
+
+	def getAvailableBike()
+		bike_holder = nil
+		@bikes.each do |bike|
+			if bike.availability == true
+				bike_holder = bike
+				break
+			end
+		end
+		return bike_holder
+	end
 
 end

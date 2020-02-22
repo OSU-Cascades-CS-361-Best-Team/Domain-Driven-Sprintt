@@ -2,30 +2,30 @@ class Bike
 
 
   #declared getter and setters
-  attr_accessor :weight, :color, :size, :availability, :label, :description
+  attr_accessor :weight, :color, :size, :availability, :label, :description, :price, :id
 
-  def initialize (weight, color, size, availability, description)
+  def initialize (id, weight, color, size, availability, description, price)
+    @id = id
     @weight = weight
     @color = color
     @size = size
     @availability = availability
     @description = description
-  end
-
-  def repair
+    @price = price
   end
 
   def print_attributes
-    print @weight , " " , @color , " " , @size , " " ,@availability , " " , @description, "\n"
+    print @id, " ", @weight , " " , @color , " " , @size , " " ,@availability , " " , @description, " ", @price, "\n"
   end
 
 end
 
 class NilBike
 
-  attr_accessor :description
+  attr_accessor :description, :id
 
   def initialize
+    @id = -1
     @description = "This is a Nill Bike"
   end
 
