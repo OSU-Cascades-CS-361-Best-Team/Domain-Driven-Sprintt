@@ -7,4 +7,8 @@ class InventoryItem
     @id = id
   end
 
+  def print_bike
+    @bike.print_attributes
+  end
+
 end
