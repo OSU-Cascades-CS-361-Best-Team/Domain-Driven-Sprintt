@@ -10,15 +10,21 @@ bike3 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
 bike4 = Bike.new(10, "pink", 10, :FALSE, "Pink Bike")
 bike5 = Bike.new(10, "pink", 10, :TRUE, "Pink Bike")
 
-item1 =
+nilBike = NilBike.new
+
+item1 = InventoryItem.new(nilBike)
+item2 = InventoryItem.new(nilBike)
+item3 = InventoryItem.new(nilBike)
+item4 = InventoryItem.new(nilBike)
+item5 = InventoryItem.new(nilBike)
 
 inventory = Inventory.new
-CheckInventory = CheckInventory.new
+checkInventory = CheckInventory.new
 
-inventory.add_item(bike1)
-inventory.add_item(bike2)
-inventory.add_item(bike3)
-inventory.add_item(bike4)
-inventory.add_item(bike5)
+inventory.add_item(item1, bike1)
+inventory.add_item(item2, bike2)
+inventory.add_item(item3, bike3)
+inventory.add_item(item4, bike4)
+inventory.add_item(item5, bike5)
 
-CheckInventory.pretty_print(inventory.items)
+checkInventory.pretty_print(inventory.items)
