@@ -15,3 +15,11 @@ class Bike
 
     end
 end
+
+class NilBike
+
+	def initialize()
+		@id = -1
+	end
+
+end
