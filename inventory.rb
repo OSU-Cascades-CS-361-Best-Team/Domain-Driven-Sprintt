@@ -11,7 +11,6 @@ class Inventory
     @largestId += 1
     inventoryItem.bike = bike
     inventoryItem.id = @largestId
-    puts inventoryItem.id
     @items.append(inventoryItem)
   end
 
