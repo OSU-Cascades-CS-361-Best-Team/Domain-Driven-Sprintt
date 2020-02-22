@@ -6,7 +6,8 @@ class CheckInventory
 
   def pretty_print (item)
     item.each{ |item|
-     item.print_bike
+      print(item.id, " ")
+      item.print_bike
   }
   end
 
