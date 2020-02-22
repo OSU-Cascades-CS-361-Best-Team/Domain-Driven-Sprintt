@@ -21,6 +21,16 @@ class Inventory
 		end
 	end
 
+	def getAvailableBikes()
+		return_list = []
+		@@bike_list.each do |bike|
+			if bike.availability == true
+				return_list << bike
+			end
+		end
+		return_list
+	end
+
 end
 
 bike = Bike.new(1, 100, true, 150)
