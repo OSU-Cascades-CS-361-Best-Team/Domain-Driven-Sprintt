@@ -11,12 +11,18 @@ class Bike
         
     end
 
+    def setAvailability(availability)
+    	@availability = availability
+    end
+
     def run
 
     end
 end
 
 class NilBike
+
+	attr_accessor :id
 
 	def initialize()
 		@id = -1

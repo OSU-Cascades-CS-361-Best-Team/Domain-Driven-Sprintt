@@ -1,6 +1,10 @@
+require_relative 'bike'
+
 class BicycleRentalWorkflow
-    def run(inventory, bike_rental)
-        
+    def run(inventory, rental)
+        bike = inventory.getAvailableBike()
+        rental.bike = bike
+        bike.setAvailability(false)
     end
 end
 
