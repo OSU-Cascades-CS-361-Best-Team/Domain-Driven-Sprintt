@@ -4,6 +4,7 @@ class Bicycle_Rental
 
     def initialize (customer, bike)
         @customer = customer
+        @bike = bike
         @rental_id = 0
     end
 

@@ -28,15 +28,18 @@ class Inventory
 				return_list << bike
 			end
 		end
-		return_list
+		puts return_list
 	end
 
 end
 
 bike = Bike.new(1, 100, true, 150)
-bike2 = Bike.new(2, 90, true, 120)
+bike2 = Bike.new(2, 90, false, 120)
 inventory = Inventory.new()
 
 inventory.add(bike)
 inventory.add(bike2)
-inventory.view()
+#inventory.view()
+inventory.getAvailableBikes()
+
+

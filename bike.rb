@@ -6,7 +6,7 @@ class Bike
     def initialize(id, weight, availability, price)
     	@id = id
         @weight = weight
-        @avialability = availability
+        @availability = availability
         @price = price
         
     end
