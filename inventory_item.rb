@@ -1,8 +1,8 @@
-class Inventory
+class InventoryItem
 
-  attr_reader :id, :bike
+  attr_accessor :id, :bike
 
-  def initialize(bike, id)
+  def initialize(bike, id = 0)
     @bike = bike
     @id = id
   end
