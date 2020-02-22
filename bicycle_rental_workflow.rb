@@ -4,7 +4,7 @@ class BicycleRentalWorkflow
     def run(inventory, rental)
         bike = inventory.getAvailableBike()
         rental.bike = bike
-        bike.setAvailability(false)
+        bike.availability = false
     end
 end
 

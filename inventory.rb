@@ -21,11 +21,13 @@ class Inventory
 	end
 
 	def getAvailableBike()
+		bike_holder = nil
 		@bike_list.each do |bike|
 			if bike.availability == true
-				bike
+				bike_holder = bike
 			end
 		end
+		return bike_holder
 	end
 
 end

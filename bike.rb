@@ -11,10 +11,6 @@ class Bike
         
     end
 
-    def setAvailability(availability)
-    	@availability = availability
-    end
-
     def run
 
     end
