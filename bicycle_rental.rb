@@ -1,13 +1,13 @@
-require_relative 'inventory'
-require_relative 'customer'
-
 class Bicycle_Rental
-    def initialize (customer, inventory, bike)
+
+    attr_accessor :rental_id
+
+    def initialize (customer, bike)
         @customer = customer
-        @inventory = inventory
-        @bike = bike
+        @rental_id = 0
     end
 
-    
+end
+
 
 
