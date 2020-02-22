@@ -7,8 +7,10 @@ class Inventory
     @largestId = largestId
   end
 
-  def add_item (inventoryItem)
-    id = largest
+  def add_item (inventoryItem, bike)
+    id = @largestId + 1
+    inventoryItem.bike = bike
+    inventoryItem.id = id
     @items.append(inventoryItem)
   end
 
