@@ -21,25 +21,14 @@ class Inventory
 		end
 	end
 
-	def getAvailableBikes()
-		return_list = []
+	def getAvailableBike()
 		@@bike_list.each do |bike|
 			if bike.availability == true
-				return_list << bike
+				bike
 			end
 		end
-		puts return_list
 	end
 
 end
-
-bike = Bike.new(1, 100, true, 150)
-bike2 = Bike.new(2, 90, false, 120)
-inventory = Inventory.new()
-
-inventory.add(bike)
-inventory.add(bike2)
-#inventory.view()
-inventory.getAvailableBikes()
 
 
