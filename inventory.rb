@@ -1,35 +1,28 @@
-require_relative 'bike'
-
 class Inventory
 
-	def initialize()
-		@bike_list = []
-	end
+  attr_reader :bikes
+
+  def initialize(bikes = [])
+    @bikes = bikes
+  end
 
 	def add(bike)
-		@bike_list << bike
+		@bikes << bike
 	end
 
 	def remove(bike)
-		@bike_list << bike
-	end
-
-	def view()
-		@bike_list.each do |bike|
-			puts bike.id
-		end
+		@bikes << bike
 	end
 
 	def getAvailableBike()
 		bike_holder = nil
-		@bike_list.each do |bike|
+		@bikes.each do |bike|
 			if bike.availability == true
 				bike_holder = bike
+				break
 			end
 		end
 		return bike_holder
 	end
 
 end
-
-

@@ -1,5 +1,3 @@
-require_relative 'bike'
-
 class BicycleRentalWorkflow
     def run(inventory, rental)
         bike = inventory.getAvailableBike()
@@ -7,7 +5,3 @@ class BicycleRentalWorkflow
         bike.availability = false
     end
 end
-
-
-
-
