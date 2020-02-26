@@ -10,7 +10,8 @@ class update_inventory
     # update inventory function that takes bikes
     # for each bike, update inventory ?
     def update(inventory, bike)
-        
+        inventory << bike
+    end    
 
 
 end
