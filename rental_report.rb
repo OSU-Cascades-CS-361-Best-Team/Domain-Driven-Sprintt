@@ -1,5 +1,5 @@
 class RentalReport
-    def initialize 
-
+    def initialize(bicycle_rental)
+        
     end
 end
