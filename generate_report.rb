@@ -1,7 +1,7 @@
 class GenerateReport
 
-    def run
-        
+    def run(report)
+        rental.generateReport
     end
-    
+
 end
