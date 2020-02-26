@@ -4,6 +4,7 @@ require_relative 'check_inventory'
 require_relative 'bicycle_rental'
 require_relative 'customer'
 require_relative 'bicycle_rental_workflow'
+require_relative 'update_inventory'
 
 customer1 = Customer.new(1, 'John', 'Doe')
 customer2 = Customer.new(1, 'Jane', 'Doe')
@@ -13,6 +14,7 @@ bike2 = Bike.new(2, 10, "pink", 10, false, "Pink Bike", 200)
 bike3 = Bike.new(3, 10, "pink", 10, true, "Pink Bike", 150)
 bike4 = Bike.new(4, 10, "pink", 10, false, "Pink Bike", 120)
 bike5 = Bike.new(5, 10, "pink", 10, true, "Pink Bike", 8000)
+bike6 = Bike.new(5, 10, "Blue", 10, true, "Blue Bike", 8000)
 
 nilBike = NilBike.new
 
@@ -38,3 +40,9 @@ workflow.run(inventory, rental2)
 puts "\n"
 puts rental1.bike.print_attributes
 puts rental2.bike.print_attributes
+
+update_inventory = UpdateInventory.new
+
+update_inventory.update_with_new_bike(inventory, bike6)
+
+checkInventory.pretty_print(inventory.bikes)
