@@ -53,9 +53,10 @@ generate_report = GenerateReport.new
 generate_report.pretty_print(rental_report1)
 generate_report.pretty_print(rental_report2)
 
+puts "\n"
+
 update_inventory = UpdateInventory.new
 
 update_inventory.update_with_new_bike(inventory, bike6)
 
 checkInventory.pretty_print(inventory.bikes)
-
