@@ -1,7 +1,7 @@
 class GenerateReport
 
     def run(report)
-        report.generate_report
+        report.generate
     end
 
 end

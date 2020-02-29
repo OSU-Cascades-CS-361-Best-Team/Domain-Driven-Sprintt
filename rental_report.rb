@@ -9,4 +9,8 @@ class RentalReport
         @bike_id = rental.get_bike_id
         @bike_description = rental.get_bike_description
     end
+
+    def generate
+
+    end
 end
