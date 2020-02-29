@@ -15,6 +15,7 @@ class RentalReport
     end
 
     def pretty_print
-
+        puts "rental_id | customer_id | customer_name | bike_id | bike_description | pick_up_date | drop_off_date | price"
+        puts @rental_id + "|" + @customer_id + "|" + @customer_name + "|" + @bike_id + "|" + @bike_description + "|" + @pick_up_date + "|" + @drop_off_date + "|" + @price
     end
 end
