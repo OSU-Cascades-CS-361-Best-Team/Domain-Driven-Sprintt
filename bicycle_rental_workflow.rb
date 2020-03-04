@@ -1,7 +1,7 @@
 class BicycleRentalWorkflow
     def run(inventory, rental)
-        bike = inventory.getAvailableBike()
-        rental.bike = bike
-        bike.availability = false
+        item = inventory.getAvailableItem()
+        rental.item = item
+        item.availability = false
     end
 end
