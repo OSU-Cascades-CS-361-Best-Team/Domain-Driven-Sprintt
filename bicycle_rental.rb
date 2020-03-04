@@ -1,12 +1,12 @@
 class BicycleRental
 
-    attr_accessor :id, :bike, :customer, :price, :pick_up, :drop_off
+    attr_accessor :id, :item, :customer, :price, :pick_up, :drop_off
 
     @@current_id = 1
 
-    def initialize (customer, bike, price, pick_up, drop_off)
+    def initialize (customer, item, price, pick_up, drop_off)
         @customer = customer
-        @bike = bike
+        @item = item
         @id = @@current_id
         @price = price
         @pick_up = pick_up
@@ -22,11 +22,11 @@ class BicycleRental
         customer.f_name + " " + customer.l_name
     end
 
-    def get_bike_id
-        bike.id
+    def get_item_id
+        item.id
     end
 
-    def get_bike_description
-        bike.description
+    def get_item_description
+        item.description
     end
 end
