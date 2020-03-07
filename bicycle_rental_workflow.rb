@@ -1,6 +1,8 @@
 class BicycleRentalWorkflow
 
   def initialize(inventory, rental)
+  	@inventory = inventory
+  	@rental = rental
   end
 
   def run(inventory, rental)
