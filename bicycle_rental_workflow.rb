@@ -7,9 +7,9 @@ class BicycleRentalWorkflow
   	@rental = rental
   end
 
-  def run(inventory, rental)
-    item = inventory.getAvailableItem()
-    rental.item = item
+  def run()
+    item = @inventory.getAvailableItem()
+    @rental.item = item
     item.availability = false
   end
   
