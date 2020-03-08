@@ -1,12 +1,15 @@
 require_relative 'bike'
 require_relative 'inventory'
-require_relative 'check_inventory'
+require_relative 'display_inventory'
 require_relative 'bicycle_rental'
 require_relative 'customer'
 require_relative 'bicycle_rental_workflow'
 require_relative 'generate_report'
 require_relative 'rental_report'
 require_relative 'update_inventory'
+require_relative 'get_available_item'
+require_relative 'kayak'
+
 
 
 customer1 = Customer.new(1, 'John', 'Doe')
@@ -17,9 +20,23 @@ bike2 = Bike.new(2, 10, "pink", 10, false, "Pink Bike", 200)
 bike3 = Bike.new(3, 10, "pink", 10, true, "Pink Bike", 150)
 bike4 = Bike.new(4, 10, "pink", 10, false, "Pink Bike", 120)
 bike5 = Bike.new(5, 10, "pink", 10, true, "Pink Bike", 8000)
-bike6 = Bike.new(5, 10, "Blue", 10, true, "Blue Bike", 8000)
+bike6 = Bike.new(6, 10, "Blue", 10, true, "Blue Bike", 8000)
 
 nilBike = NilBike.new
+
+kayak1 = Kayak.new(1, "pink", 10, 100, true)
+kayak2 = Kayak.new(2, "pink", 10, 100, true)
+kayak3 = Kayak.new(3, "pink", 10, 100, false)
+kayak4 = Kayak.new(4, "pink", 10, 100, false)
+kayak5 = Kayak.new(5, "pink", 10, 100, true)
+kayak6 = Kayak.new(6, "Blue", 10, 100, false)
+
+# @id = id
+# @description = description
+# @price = price
+# @weight = weight
+
+
 
 inventory = Inventory.new
 checkInventory = CheckInventory.new
