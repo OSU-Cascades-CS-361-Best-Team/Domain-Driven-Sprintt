@@ -1,7 +1,15 @@
 class BicycleRentalWorkflow
-    def run(inventory, rental)
-        bike = inventory.getAvailableBike()
-        rental.bike = bike
-        bike.availability = false
-    end
+
+  attr_accessor :item, :rental
+
+  def initialize(inventory, rental)
+  	@item = inventory.getAvailableItem
+  	@rental = rental
+  end
+
+  def run()
+    @rental.item = @item
+    @item.availability = false
+  end
+  
 end
