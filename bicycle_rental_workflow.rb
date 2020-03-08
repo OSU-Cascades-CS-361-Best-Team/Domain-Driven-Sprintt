@@ -2,9 +2,9 @@ class BicycleRentalWorkflow
 
   attr_accessor :item, :rental
 
-  def initialize(inventory, rental)
-  	@item = inventory.getAvailableItem
-  	@rental = rental
+  def initialize(item, rental)
+    @item = item
+    @rental = rental
   end
 
   def run()

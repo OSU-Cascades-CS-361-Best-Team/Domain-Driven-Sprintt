@@ -1,11 +1,15 @@
 class GenerateReport
 
-    def run(report)
-        report.generate
-    end
+  def initialize(report)
+  	@report = report
+  end
 
-    def pretty_print(report)
-        report.pretty_print
-    end
+  def run
+    @report.generate
+  end
+
+  def pretty_print
+    @report.pretty_print
+  end
 
 end

@@ -15,19 +15,19 @@ class BicycleRental
   end
 
   def get_customer_id
-      customer.cust_id
+    customer.cust_id
   end
 
   def get_customer_name
-      customer.f_name + " " + customer.l_name
+    customer.f_name + " " + customer.l_name
   end
 
   def get_item_id
-      item.id
+    item.id
   end
 
   def get_item_description
-      item.description
+    item.description
   end
   
 end
