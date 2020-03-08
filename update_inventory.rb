@@ -2,21 +2,16 @@
 
 #USE CASE: Manager updates inventory
 
-class UpdateInventory
-  
-    #Adds a new bike to the inventory
-    def update_with_new_bike(inventory, bike)
-        inventory.add(bike)
-    end  
-    
-    #Removes a bike from the inventory
-    def update_by_removing_bike(inventory, bike)
-        inventory.remove(bike)
+class add_inventory:
+
+    def initialize(inventory, item)
+        @inventory = inventory;
+        @item = item;
     end
-
-    #Update Bike ID
-
-    
+  
+    def run()
+        @inventory.add(@item)
+    end      
 
 end
 
