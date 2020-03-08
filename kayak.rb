@@ -7,6 +7,7 @@ class Kayak
         @description = description
         @price = price
         @weight = weight
+        @availability = availability
     end
 
     def print_attributes
