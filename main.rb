@@ -75,8 +75,8 @@ displayInventoryKayaks.run
 rental1 = BicycleRental.new(customer1, nilBike, "$1,000", "02/29/2001", "Never")
 rental2 = BicycleRental.new(customer2, nilBike, "$100,000,000", "02/28/2020", "02/29/2020")
 
-get_available_bike = 
-git_available_kayak
+get_available_bike = GetAvailableItem.new(inventory.items[:bikes])
+get_available_kayak = GetAvailableItem.new(inventory.items[:kayaks])
 
 workflow = BicycleRentalWorkflow.new()
 
