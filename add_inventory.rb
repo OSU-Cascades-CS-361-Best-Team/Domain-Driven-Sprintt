@@ -4,13 +4,14 @@
 
 class add_inventory:
 
-    def initialize(inventory, item)
+    def initialize(inventory, item, category)
         @inventory = inventory;
         @item = item;
+        @category = category;
     end
   
     def run()
-        @inventory.add(@item)
+        @inventory.add(@category, @item)
     end      
 
 end
