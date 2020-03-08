@@ -1,11 +1,13 @@
 class CheckInventory
 
-  def pretty_print (bikes)
+  def initialize(inventory)
+    @inventory = inventory
+  end
 
-    bikes.each{ |bike|
-      bike.print_attributes
+  def run()
+    @inventory.each{ |item|
+      item.print_attributes
     }
-
   end
 
 end
