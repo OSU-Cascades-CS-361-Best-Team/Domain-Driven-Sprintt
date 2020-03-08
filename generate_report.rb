@@ -6,12 +6,12 @@ class GenerateReport
   	@report = report
   end
 
-  def run(report)
-    report.generate
+  def run
+    @report.generate
   end
 
-  def pretty_print(report)
-    report.pretty_print
+  def pretty_print
+    @report.pretty_print
   end
 
 end
