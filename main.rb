@@ -32,7 +32,7 @@ kayak4 = Kayak.new(4, "pink", 10, 100, false)
 kayak5 = Kayak.new(5, "pink", 10, 100, true)
 kayak6 = Kayak.new(6, "Blue", 10, 100, false)
 
-
+nilKayak = NilKayak.new
 
 inventory = Inventory.new
 displayInventoryBikes = DisplayInventory.new(inventory.items[:bikes])
@@ -87,20 +87,18 @@ rental_workflow1.run
 rental_workflow2.run
 
 puts "\n"
-puts rental1.bike.print_attributes
-puts rental2.bike.print_attributes
 
 
-rental_report1 = RentalReport.new(rental1)
-rental_report2 = RentalReport.new(rental2)
+rental_report1 = RentalReport.new(rental1.get_customer_id, rental1.get_customer_name, rental1.drop_off, rental1.pick_up, rental1.get_item_id, rental1.get_item_description, rental1.id, rental1.price)
+rental_report2 = RentalReport.new(rental2.get_customer_id, rental2.get_customer_name, rental2.drop_off, rental2.pick_up, rental2.get_item_id, rental2.get_item_description, rental2.id, rental2.price)
 
-generate_report = GenerateReport.new
+generate_report1 = GenerateReport.new(rental_report1)
+generate_report2 = GenerateReport.new(rental_report2)
 
-generate_report.pretty_print(rental_report1)
-generate_report.pretty_print(rental_report2)
+generate_report1.pretty_print
+generate_report2.pretty_print
 
 puts "\n"
 
 
 
-checkInventory.pretty_print(inventory.bikes)
