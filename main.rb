@@ -73,15 +73,18 @@ displayInventoryBikes.run
 displayInventoryKayaks.run
 
 rental1 = BicycleRental.new(customer1, nilBike, "$1,000", "02/29/2001", "Never")
-rental2 = BicycleRental.new(customer2, nilBike, "$100,000,000", "02/28/2020", "02/29/2020")
+rental2 = BicycleRental.new(customer2, nilKayak, "$100,000,000", "02/28/2020", "02/29/2020")
 
 get_available_bike = GetAvailableItem.new(inventory.items[:bikes])
 get_available_kayak = GetAvailableItem.new(inventory.items[:kayaks])
 
-workflow = BicycleRentalWorkflow.new()
 
-workflow.run(inventory, rental1)
-workflow.run(inventory, rental2)
+
+rental_workflow1 = BicycleRentalWorkflow.new(get_available_bike.run, rental1)
+rental_workflow2 = BicycleRentalWorkflow.new(get_available_kayak.run, rental2)
+
+rental_workflow1.run
+rental_workflow2.run
 
 puts "\n"
 puts rental1.bike.print_attributes
