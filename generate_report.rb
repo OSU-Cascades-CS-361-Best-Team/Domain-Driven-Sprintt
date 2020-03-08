@@ -1,7 +1,5 @@
 class GenerateReport
 
-  attr_accessor :report
-
   def initialize(report)
   	@report = report
   end
