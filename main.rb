@@ -100,5 +100,19 @@ generate_report2.pretty_print
 
 puts "\n"
 
+displayInventoryBikes.run
+puts "\n"
+removeInventory1 = RemoveInventory.new(inventory,bike6, :bikes)
+removeInventory1.run
+displayInventoryBikes.run
+
+puts "\n"
+
+displayInventoryKayaks.run
+puts "\n"
+removeInventory2 = RemoveInventory.new(inventory,kayak3, :kayaks)
+removeInventory2.run
+displayInventoryKayaks.run
+
 
 

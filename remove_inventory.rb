@@ -10,7 +10,7 @@
     end
   
     def run()
-        @inventory.remove(@item, @category)
+        @inventory.remove(@category, @item)
     end      
 
 end
