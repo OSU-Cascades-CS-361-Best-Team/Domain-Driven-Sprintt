@@ -1,7 +1,7 @@
  
  #USE CASE: Manager removes item to inventory/
  
- class RemoveInventory:
+ class RemoveInventory
 
     def initialize(inventory, item, category)
         @inventory = inventory;

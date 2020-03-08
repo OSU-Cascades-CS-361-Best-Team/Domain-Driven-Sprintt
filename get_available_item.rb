@@ -1,4 +1,4 @@
-class getAvailableItem
+class GetAvailableItem
 
   def initialize(items)
     @items = items
