@@ -1,5 +1,5 @@
  
- #USE CASE: Manager removes item to inventory
+ #USE CASE: Manager removes item to inventory/
  
  class remove_inventory:
 
