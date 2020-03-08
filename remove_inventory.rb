@@ -1,15 +1,16 @@
  
- #USE CASE: Manager removes item to inventory
+ #USE CASE: Manager removes item to inventory/
  
  class remove_inventory:
 
-    def initialize(inventory, item)
+    def initialize(inventory, item, category)
         @inventory = inventory;
         @item = item;
+        @category = category;
     end
   
     def run()
-        @inventory.remove(@item)
+        @inventory.remove(@item, @category)
     end      
 
 end
