@@ -1,17 +1,20 @@
 class Inventory
 
-  attr_reader :bikes
+  attr_reader :items
 
-  def initialize(bikes = [])
-    @bikes = bikes
+  def initialize(bikes = [], kayaks = [])
+    @items = {
+			bikes: bikes,
+			kayaks: kayaks
+		}
   end
 
-	def add(bike)
-		@bikes << bike
+	def add(category, item)
+		@items[category] << item
 	end
 
-	def remove(bike)
-		@bikes << bike
+	def remove(category, item)
+		@items[category].delete(item)
 	end
 
 	def getAvailableBike()
