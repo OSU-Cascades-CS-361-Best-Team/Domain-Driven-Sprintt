@@ -6,7 +6,8 @@ require_relative 'customer'
 require_relative 'bicycle_rental_workflow'
 require_relative 'generate_report'
 require_relative 'rental_report'
-require_relative 'update_inventory'
+require_relative 'add_inventory'
+require_relative 'remove_inventory'
 require_relative 'get_available_item'
 require_relative 'kayak'
 
@@ -30,11 +31,6 @@ kayak3 = Kayak.new(3, "pink", 10, 100, false)
 kayak4 = Kayak.new(4, "pink", 10, 100, false)
 kayak5 = Kayak.new(5, "pink", 10, 100, true)
 kayak6 = Kayak.new(6, "Blue", 10, 100, false)
-
-# @id = id
-# @description = description
-# @price = price
-# @weight = weight
 
 
 

@@ -2,7 +2,7 @@
 
 #USE CASE: Manager updates inventory/
 
-class add_inventory:
+class AddInventory
 
     def initialize(inventory, item, category)
         @inventory = inventory;
