@@ -1,6 +1,6 @@
 #Workflow
 
-#USE CASE: Manager updates inventory
+#USE CASE: Manager updates inventory/
 
 class add_inventory:
 
